@@ -1,0 +1,19 @@
+{
+    "name": "websockets-javascript",
+    "type": "module",
+    "repository": "equibles/websockets-javascript",
+    "homepage": "https://www.equibles.com/",
+    "version": "1.0.0",
+    "description": "JavaScript library to get real-time quotes from Equibles",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@microsoft/signalr": "^6.0.5",
+        "@microsoft/signalr-protocol-msgpack": "^6.0.5"
+    }
+}
