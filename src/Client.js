@@ -1,7 +1,7 @@
 import * as signalR from '@microsoft/signalr';
 import * as messagePack from '@microsoft/signalr-protocol-msgpack';
 
-class Client {
+export class Client {
     constructor(apiKey, tickers) {
         this.apiKey = apiKey;
         this.connection = new signalR.HubConnectionBuilder()
@@ -87,6 +87,4 @@ class Client {
             }
         });
     }
-}
-
-export default Client;
+};

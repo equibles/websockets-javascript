@@ -1,19 +1,33 @@
 {
-    "name": "websockets-javascript",
-    "type": "module",
-    "repository": "equibles/websockets-javascript",
+    "name": "@equibles/websockets",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/equibles/websockets-javascript.git"
+    },
     "homepage": "https://www.equibles.com/",
     "version": "1.0.0",
     "description": "JavaScript library to get real-time quotes from Equibles",
-    "main": "index.js",
+    "main": "src/index.js.",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "webpack --mode production --progress"
     },
+    "files": [
+        "dist/**/*",
+        "src/**/*"
+    ],
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Equibles",
+    "license": "MIT",
     "dependencies": {
+        "@babel/register": "^7.17.7",
         "@microsoft/signalr": "^6.0.5",
-        "@microsoft/signalr-protocol-msgpack": "^6.0.5"
+        "@microsoft/signalr-protocol-msgpack": "^6.0.5",
+        "webpack": "^5.72.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.10",
+        "@babel/core": "^7.17.10",
+        "@babel/plugin-transform-modules-umd": "^7.16.7",
+        "webpack-cli": "^4.9.2"
     }
 }

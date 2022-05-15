@@ -2,10 +2,27 @@
 
 ## Getting Started
 
-Checkout the index.js file
 
+### Browser
+```html
+<script type="text/javascript" src="dist/all.min.js"></script>
+<script type="text/javascript">
+    (async () => {
+        let client = new Equibles.Client("MY_API_KEY", ["AAPL", "GOOG", "TSLA"]);
+
+        client.addQuoteListener(q => {
+            console.log(q);
+        });
+
+        await client.connect();
+    })();
+</script>
+
+```
+
+### Node JS
 ```javascript
-import Client from './client.js';
+import {Client} from '@equibles/websockets';
 
 let client = new Client("MY_API_KEY", ["AAPL", "GOOG", "TSLA"]);
 
